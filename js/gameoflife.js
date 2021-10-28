@@ -1,6 +1,10 @@
-function seed() {}
+function seed([...args]) {
+  return args;
+}
 
-function same([x, y], [j, k]) {}
+function same([x, y], [j, k]) {
+  return [x, y].every(element => [j, k].includes(element));
+}
 
 // The game state to search for `cell` is passed as the `this` value of the function.
 function contains(cell) {}
